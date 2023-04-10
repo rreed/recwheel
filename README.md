@@ -65,7 +65,8 @@ First, install it as a Discord bot. The exact steps to doing this are outside th
 The API, once it's installed, is as follows (all requests must be directed to the bot with `@recwheel`, or whatever else you named it):
 - `add me once`: sign up for participating the next time the wheel is spun
 - `add me always`: sign up for participating in all future spins
-- `remove me`: no longer particpate in future wheel spins
+- `add me interested`: mark yourself as "interested"; interested users will be tagged by `prespin` but not by `spin`
+- `remove me`: no longer participate in future wheel spins
 - `prespin`: notifies users that the wheel is about to be spun, tags all users registered as "interested"
 - `spin`: spins the wheel
 - `help`: prints this menu
