@@ -73,3 +73,9 @@ The API, once it's installed, is as follows (all requests must be directed to th
 When `prespin` is run, all participants at all levels are notified. This gives users a chance to opt in before the wheel is spun.
 
 When `spin` is run, all users tagged `ALWAYS` or `ONCE` are put into a list and then shuffled. Each user in this list is pointed to the next user, and the last pointed to the first. Each user should then discuss the chosen topic with the user that their arrow points to.
+
+After `spin` is run, all users tagged as `ONCE` are moved back to `INTERESTED`.
+
+### Copyright
+
+(c) 2023 Ammy I guess.
