@@ -142,5 +142,7 @@ def maybe_init_db():
 
 if __name__ == "__main__":
     load_dotenv()
+    print("Environment loaded...")
     maybe_init_db()
+    print("Database initialized, if necessary...")
     client.run(os.getenv('BOT_TOKEN'))
