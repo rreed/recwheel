@@ -6,7 +6,7 @@ import random
 from dotenv import load_dotenv
 from enum import IntEnum
 
-DB_NAME = os.environ["DB_PATH"] or "/data/recs.db"
+DB_NAME = os.environ.get("DB_PATH") or "/data/recs.db"
 
 HELP_TEXT = """
 Hi! Please choose from one of the following:
