@@ -6,7 +6,7 @@ import random
 from dotenv import load_dotenv
 from enum import IntEnum
 
-DB_NAME = "recs.db"
+DB_NAME = os.environ["DB_PATH"] or "/data/recs.db"
 
 HELP_TEXT = """
 Hi! Please choose from one of the following:
@@ -108,7 +108,7 @@ async def on_message(message):
                 print("There are no participants, will not spin")
                 return
             random.shuffle(all_participants)
-            
+
             # we've shuffled everyone, we can now point everyone at the next person
             msg = ""
             for participant in all_participants:
