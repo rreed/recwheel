@@ -121,8 +121,8 @@ async def on_message(message):
 
             # okay, we're done, let's move the "once" participants back to "never"
             for participant in once:
-                conn.execute("UPDATE users SET participation = ? WHERE user_id = ?", (ParticipationLevel.INTERESTED, author_id,))
-                print(f"Moving user {author_id} back to INTERESTED")
+                conn.execute("UPDATE users SET participation = ? WHERE user_id = ?", (ParticipationLevel.INTERESTED, participant,))
+                print(f"Moving user {participant} back to INTERESTED")
         case _:
             await message.channel.send(f"Sorry, <@{author_id}>, I don't understand. Have you tried asking for `help`?")
     conn.commit()
